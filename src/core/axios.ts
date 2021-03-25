@@ -1,5 +1,7 @@
 import axios from 'axios'
 
-axios.defaults.baseURL = window.location.origin
+const axiosInstance = axios.create({
+    baseURL: 'https://api.github.com'
+})
 
-export default axios
+export default axiosInstance
